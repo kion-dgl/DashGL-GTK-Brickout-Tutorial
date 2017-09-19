@@ -98,24 +98,8 @@ static void on_realize(GtkGLArea *area) {
 	GLint compile_ok = GL_FALSE;
 	GLint link_ok = GL_FALSE;
 
-	const char *fs_source =
-	"#version 130\n"
-	"void main (void) {\n"
-	"	gl_FragColor[0] = 0.0;\n"
-	"	gl_FragColor[1] = 0.0;\n"
-	"	gl_FragColor[2] = 1.0;\n"
-	"}";
-
-	GLuint fs = glCreateShader(GL_FRAGMENT_SHADER);
-	glShaderSource(fs, 1, &fs_source, NULL);
-	glCompileShader(fs);
-	glGetShaderiv(fs, GL_COMPILE_STATUS, &compile_ok);
-	if(!compile_ok) {
-		fprintf(stderr, "Error in fragment shader\n");
-		return;
-	}
-
 	GLuint vs = shader_load_file("shader/vertex.glsl", GL_VERTEX_SHADER);
+	GLuint fs = shader_load_file("shader/fragment.glsl", GL_FRAGMENT_SHADER);
 
 	program = glCreateProgram();
 	glAttachShader(program, vs);
