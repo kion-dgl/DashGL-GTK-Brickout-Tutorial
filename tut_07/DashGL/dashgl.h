@@ -90,6 +90,18 @@
 	/**********************************************************************/
 	/** Matrix4 Utilities                                                **/	
 	/**********************************************************************/
+	
+	// Basic Utilities
+
+	void mat4_identity(mat4 out);
+	void mat4_copy(mat4 in, mat4 out);
+	void mat4_multiply(mat4 a, mat4 b, mat4 out);
+	
+	// Transformation Utilities
+
+	void mat4_translate(vec3 pos, mat4 out);
+
+	// Projection Utilities
 
 	void mat4_orthagonal(float width, float height, mat4 out);
 

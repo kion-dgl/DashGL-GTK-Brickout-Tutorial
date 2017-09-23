@@ -225,6 +225,102 @@ void mat3_translate(mat3 in, vec2 pos, mat3 out) {
 /** Mat4 Utilities                                                   **/	
 /**********************************************************************/
 
+
+void mat4_identity(mat4 out) {
+
+	out[M4_00] = 1.0f;
+	out[M4_01] = 0.0f;
+	out[M4_02] = 0.0f;
+	out[M4_03] = 0.0f;
+	out[M4_10] = 0.0f;
+	out[M4_11] = 1.0f;
+	out[M4_12] = 0.0f;
+	out[M4_13] = 0.0f;
+	out[M4_20] = 0.0f;
+	out[M4_21] = 0.0f;
+	out[M4_22] = 1.0f;
+	out[M4_23] = 0.0f;
+	out[M4_30] = 0.0f;
+	out[M4_31] = 0.0f;
+	out[M4_32] = 0.0f;
+	out[M4_33] = 1.0f;
+
+}
+
+void mat4_copy(mat4 in, mat4 out) {
+
+	out[M4_00] = in[M4_00];
+	out[M4_01] = in[M4_01];
+	out[M4_02] = in[M4_02];
+	out[M4_03] = in[M4_03];
+	out[M4_10] = in[M4_10];
+	out[M4_11] = in[M4_11];
+	out[M4_12] = in[M4_12];
+	out[M4_13] = in[M4_13];
+	out[M4_20] = in[M4_20];
+	out[M4_21] = in[M4_21];
+	out[M4_22] = in[M4_22];
+	out[M4_23] = in[M4_23];
+	out[M4_30] = in[M4_30];
+	out[M4_31] = in[M4_31];
+	out[M4_32] = in[M4_32];
+	out[M4_33] = in[M4_33];
+
+}
+
+void mat4_multiply(mat4 a, mat4 b, mat4 out) {
+
+	mat4 tmp;
+
+	tmp[M4_00] = a[M4_00]*b[M4_00]+a[M4_01]*b[M4_10]+a[M4_02]*b[M4_20]+a[M4_03]*b[M4_30];
+	tmp[M4_01] = a[M4_00]*b[M4_01]+a[M4_01]*b[M4_11]+a[M4_02]*b[M4_21]+a[M4_03]*b[M4_31];
+	tmp[M4_02] = a[M4_00]*b[M4_02]+a[M4_01]*b[M4_12]+a[M4_02]*b[M4_22]+a[M4_03]*b[M4_32];
+	tmp[M4_03] = a[M4_00]*b[M4_03]+a[M4_01]*b[M4_13]+a[M4_02]*b[M4_23]+a[M4_03]*b[M4_33];
+   
+	tmp[M4_10] = a[M4_10]*b[M4_00]+a[M4_11]*b[M4_10]+a[M4_12]*b[M4_20]+a[M4_13]*b[M4_30];
+	tmp[M4_11] = a[M4_10]*b[M4_01]+a[M4_11]*b[M4_11]+a[M4_12]*b[M4_21]+a[M4_13]*b[M4_31];
+	tmp[M4_12] = a[M4_10]*b[M4_02]+a[M4_11]*b[M4_12]+a[M4_12]*b[M4_22]+a[M4_13]*b[M4_32];
+	tmp[M4_13] = a[M4_10]*b[M4_03]+a[M4_11]*b[M4_13]+a[M4_12]*b[M4_23]+a[M4_13]*b[M4_33];
+ 
+	tmp[M4_20] = a[M4_20]*b[M4_00]+a[M4_21]*b[M4_10]+a[M4_22]*b[M4_20]+a[M4_23]*b[M4_30];
+	tmp[M4_21] = a[M4_20]*b[M4_01]+a[M4_21]*b[M4_11]+a[M4_22]*b[M4_21]+a[M4_23]*b[M4_31];
+	tmp[M4_22] = a[M4_20]*b[M4_02]+a[M4_21]*b[M4_12]+a[M4_22]*b[M4_22]+a[M4_23]*b[M4_32];
+	tmp[M4_23] = a[M4_20]*b[M4_03]+a[M4_21]*b[M4_13]+a[M4_22]*b[M4_23]+a[M4_23]*b[M4_33];
+ 
+	tmp[M4_30] = a[M4_30]*b[M4_00]+a[M4_31]*b[M4_10]+a[M4_32]*b[M4_20]+a[M4_33]*b[M4_30];
+	tmp[M4_31] = a[M4_30]*b[M4_01]+a[M4_31]*b[M4_11]+a[M4_32]*b[M4_21]+a[M4_33]*b[M4_31];
+	tmp[M4_32] = a[M4_30]*b[M4_02]+a[M4_31]*b[M4_12]+a[M4_32]*b[M4_22]+a[M4_33]*b[M4_32];
+	tmp[M4_33] = a[M4_30]*b[M4_03]+a[M4_31]*b[M4_13]+a[M4_32]*b[M4_23]+a[M4_33]*b[M4_33];
+
+	mat4_copy(tmp, out);
+
+}
+
+
+void mat4_translate(vec3 pos, mat4 out) {
+
+	out[M4_00] = 1.0f;
+	out[M4_10] = 0.0f;
+	out[M4_20] = 0.0f;
+	out[M4_30] = 0.0f;
+	
+	out[M4_01] = 0.0f;
+	out[M4_11] = 1.0f;
+	out[M4_21] = 0.0f;
+	out[M4_31] = 0.0f;
+	
+	out[M4_02] = 0.0f;
+	out[M4_12] = 0.0f;
+	out[M4_22] = 1.0f;
+	out[M4_32] = 0.0f;
+	
+	out[M4_03] = pos[0];
+	out[M4_13] = pos[1];
+	out[M4_23] = pos[2];
+	out[M4_33] = 1.0f;
+
+}
+
 void mat4_orthagonal(float width, float height, mat4 out) {
 	
 	float right, left, top, bottom;
@@ -239,25 +335,25 @@ void mat4_orthagonal(float width, float height, mat4 out) {
 	float inv_y = 1.0f / (top - bottom);
 	float inv_x = 1.0f / (right - left);
 
-    out[M4_00] = 2.0f * inv_x;
-    out[M4_10] = 0.0f;
-    out[M4_20] = 0.0f;
-    out[M4_30] = 0.0f;
+	out[M4_00] = 2.0f * inv_x;
+	out[M4_10] = 0.0f;
+	out[M4_20] = 0.0f;
+	out[M4_30] = 0.0f;
 
-    out[M4_01] = 0.0f;
-    out[M4_11] = 2.0f * inv_y;
-    out[M4_21] = 0.0f;
-    out[M4_31] = 0.0f;
+	out[M4_01] = 0.0f;
+	out[M4_11] = 2.0f * inv_y;
+	out[M4_21] = 0.0f;
+	out[M4_31] = 0.0f;
 
-    out[M4_02] = 0.0f;
-    out[M4_12] = 0.0f;
-    out[M4_22] = -2.0f * inv_z;
-    out[M4_32] = 0.0f;
+	out[M4_02] = 0.0f;
+	out[M4_12] = 0.0f;
+	out[M4_22] = -2.0f * inv_z;
+	out[M4_32] = 0.0f;
 
-    out[M4_03] = -(right + left)*inv_x;
-    out[M4_13] = -(top + bottom)*inv_y;
-    out[M4_23] = -(zFar + zNear)*inv_z;
-    out[M4_33] = 1.0f;
+	out[M4_03] = -(right + left)*inv_x;
+	out[M4_13] = -(top + bottom)*inv_y;
+	out[M4_23] = -(zFar + zNear)*inv_z;
+	out[M4_33] = 1.0f;
 
 }
 

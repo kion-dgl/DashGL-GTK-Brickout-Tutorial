@@ -134,13 +134,25 @@ static void on_realize(GtkGLArea *area) {
 		return;
 	}
 	
+	uniform_name = "mvp";
+	GLint uniform_mvp = glGetUniformLocation(program, uniform_name);
+	if(uniform_mvp == -1) {
+		fprintf(stderr, "Could not bind uniform %s\n", uniform_name);
+		return;
+	}
+
 	glUseProgram(program);
 
 	mat4 orthograph;
 	mat4_orthagonal(WIDTH, HEIGHT, orthograph);
 
 	glUniformMatrix4fv(uniform_ortho, 1, GL_FALSE, orthograph);
-
+	
+	vec3 pos = { 50.0f, 50.0f, 0.0f };
+	mat4 mvp;
+	mat4_translate(pos, mvp);
+	
+	glUniformMatrix4fv(uniform_mvp, 1, GL_FALSE, mvp);
 }
 
 static void on_render(GtkGLArea *area, GdkGLContext *context) {
