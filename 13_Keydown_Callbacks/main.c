@@ -14,10 +14,13 @@
 static void on_realize(GtkGLArea *area);
 static void on_render(GtkGLArea *area, GdkGLContext *context);
 static gboolean on_idle(gpointer data);
+static gboolean on_keydown(GtkWidget *widget, GdkEventKey *event);
+static gboolean on_keyup(GtkWidget *widget, GdkEventKey *event);
 
 struct {
 	float dx, dy;
 	vec3 pos;
+	vec3 color;
 	mat4 mvp;
 	GLuint vbo;
 } ball;
@@ -25,14 +28,17 @@ struct {
 struct {
 	float dx;
 	vec3 pos;
+	vec3 color;
 	mat4 mvp;
 	GLuint vbo;
+	gboolean key_left;
+	gboolean key_right;
 } paddle;
 
 GLuint program;
 GLuint vao;
 GLint attribute_coord2d;
-GLint uniform_mvp;
+GLint uniform_mvp, uniform_color;
 
 int main(int argc, char *argv[]) {
 
@@ -49,6 +55,8 @@ int main(int argc, char *argv[]) {
 	gtk_window_set_default_size(GTK_WINDOW(window), 640, 480);
 	gtk_window_set_type_hint(GTK_WINDOW(window), GDK_WINDOW_TYPE_HINT_UTILITY);
 	g_signal_connect(window, "destroy", G_CALLBACK(gtk_main_quit), NULL);
+	g_signal_connect(window, "key-press-event", G_CALLBACK(on_keydown), NULL);
+	g_signal_connect(window, "key-release-event", G_CALLBACK(on_keyup), NULL);
 
 	// Initialize GTK GL Area
 
@@ -175,6 +183,13 @@ static void on_realize(GtkGLArea *area) {
 		return;
 	}
 
+	uniform_name = "color";
+	uniform_color = glGetUniformLocation(program, uniform_name);
+	if(uniform_color == -1) {
+		fprintf(stderr, "Could not bind uniform %s\n", uniform_name);
+		return;
+	}
+
 	glUseProgram(program);
 
 	mat4 orthograph;
@@ -188,12 +203,17 @@ static void on_realize(GtkGLArea *area) {
 	ball.pos[0] = 50.0f;
 	ball.pos[1] = 50.0f;
 	ball.pos[2] = 0.0f;
+	ball.color[0] = 0.0f;
+	ball.color[1] = 0.0f;
+	ball.color[2] = 1.0f;
 
 	paddle.dx = 2.0f;
 	paddle.pos[0] = WIDTH / 2.0f;
 	paddle.pos[1] = 20.0f;
 	paddle.pos[2] = 0.0f;
-
+	paddle.color[0] = 0.0f;
+	paddle.color[1] = 0.0f;
+	paddle.color[2] = 0.0f;
 }
 
 static void on_render(GtkGLArea *area, GdkGLContext *context) {
@@ -202,6 +222,7 @@ static void on_render(GtkGLArea *area, GdkGLContext *context) {
 
 	mat4_translate(ball.pos, ball.mvp);
 	glUniformMatrix4fv(uniform_mvp, 1, GL_FALSE, ball.mvp);
+	glUniform3fv(uniform_color, 1, ball.color);
 
 	glBindVertexArray(vao);
 	glEnableVertexAttribArray(attribute_coord2d);
@@ -219,6 +240,7 @@ static void on_render(GtkGLArea *area, GdkGLContext *context) {
 
 	mat4_translate(paddle.pos, paddle.mvp);
 	glUniformMatrix4fv(uniform_mvp, 1, GL_FALSE, paddle.mvp);
+	glUniform3fv(uniform_color, 1, paddle.color);
 
 	glBindBuffer(GL_ARRAY_BUFFER, paddle.vbo);
 	glVertexAttribPointer(
@@ -255,7 +277,47 @@ static gboolean on_idle(gpointer data) {
 		ball.dy *= -1;
 	}
 
+	if(paddle.key_left) {
+		paddle.pos[0] -= paddle.dx;
+	}
+
+	if(paddle.key_right) {
+		paddle.pos[0] += paddle.dx;
+	}
+
+	if(paddle.pos[0] < 0) {
+		paddle.pos[0] = 0.0f;
+	} else if(paddle.pos[0] > WIDTH) {
+		paddle.pos[0] = WIDTH;
+	}
+
 	gtk_widget_queue_draw(GTK_WIDGET(data));
 	return TRUE;
+
+}
+
+static gboolean on_keydown(GtkWidget *widget, GdkEventKey *event) {
+
+	switch(event->keyval) {
+		case GDK_KEY_Left:
+			paddle.key_left = TRUE;
+		break;
+		case GDK_KEY_Right:
+			paddle.key_right = TRUE;
+		break;
+	}
+
+}
+
+static gboolean on_keyup(GtkWidget *widget, GdkEventKey *event) {
+
+	switch(event->keyval) {
+		case GDK_KEY_Left:
+			paddle.key_left = FALSE;
+		break;
+		case GDK_KEY_Right:
+			paddle.key_right = FALSE;
+		break;
+	}
 
 }
