@@ -64,9 +64,6 @@ static void on_realize(GtkGLArea *area) {
 		return;
 	}
 
-	glewExperimental = GL_TRUE;
-	glewInit();
-
 	const GLubyte *renderer = glGetString(GL_RENDER);
 	const GLubyte *version = glGetString(GL_VERSION);
 	const GLubyte *shader = glGetString(GL_SHADING_LANGUAGE_VERSION);
