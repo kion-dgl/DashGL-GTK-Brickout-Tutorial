@@ -3,7 +3,8 @@
  *  Copyright (C) 2017 Benjamin Collins - MIT License
  */
 
-#include <GL/glew.h>
+#include <epoxy/gl.h>
+#include <epoxy/glx.h>
 #include <gtk/gtk.h>
 #include <math.h>
 #include "DashGL/dashgl.h"

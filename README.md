@@ -9,7 +9,7 @@ This repository requires several development packages including GTK and glew. To
 you need is installed on your Linux system, use the command for your corresponding package manager
 as listed below.
 
-#### Ubuntu
+#### Ubuntu & Debian
 ```
-$ sudo apt install libgtk-3-dev make
+$ sudo apt-get install libgtk-3-dev libegl1-mesa-dev libepoxy-dev libpng-dev
 ```

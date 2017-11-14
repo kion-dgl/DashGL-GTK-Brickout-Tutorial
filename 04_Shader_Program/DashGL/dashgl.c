@@ -25,7 +25,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <GL/glew.h>
+#include <epoxy/gl.h>
+#include <epoxy/glx.h>
 #include "dashgl.h"
 
 /**********************************************************************/
