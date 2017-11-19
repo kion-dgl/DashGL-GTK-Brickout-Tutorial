@@ -1,4 +1,4 @@
-#version 130
+#version 120
 
 attribute vec2 coord2d;
 void main (void) {

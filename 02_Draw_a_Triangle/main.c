@@ -94,14 +94,14 @@ static void on_realize(GtkGLArea *area) {
 	GLint link_ok = GL_FALSE;
 
 	const char *vs_source = 
-	"#version 130\n"
+	"#version 120\n"
 	"attribute vec2 coord2d; \n"
 	"void main (void) {\n"
 	"	gl_Position = vec4(coord2d, 0.0, 1.0);\n"
 	"}";
 
 	const char *fs_source =
-	"#version 130\n"
+	"#version 120\n"
 	"void main (void) {\n"
 	"	gl_FragColor[0] = 0.0;\n"
 	"	gl_FragColor[1] = 0.0;\n"
