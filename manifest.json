@@ -19,14 +19,17 @@
   },
   "lessons" : [
     {
+      "title" : "Introduction",
       "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/master/README.md",
       "source" :  "https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial"
     },
     {
+      "title" : "Open a Window",
       "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/master/01_Open_a_Window/README.md",
       "source" : "https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/tree/master/01_Open_a_Window"
     },
     {
+      "title" : "Draw a Triangle",
       "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/master/02_Draw_a_Triangle/README.md",
       "source" : "https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/tree/master/02_Draw_a_Triangle"
     }
