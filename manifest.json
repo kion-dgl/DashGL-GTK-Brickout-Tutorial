@@ -6,20 +6,29 @@
   "window_library" : "gtk",
   "graphics_library" : "opengl 3.0",
   "title" : "Gtk Brickout",
-  "repository" : "https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/",
+  "repository" : "https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial",
   "support" : {
-    'liberapay' : "https://en.liberapay.com/DashGLProject/",
-    'patron' : "https://www.patreon.com/dashkion",
-    'ko-fi' : "https://ko-fi.com/dashgl0937"
+    "liberapay" : "https://en.liberapay.com/DashGLProject/",
+    "patron" : "https://www.patreon.com/dashkion",
+    "ko-fi" : "https://ko-fi.com/dashgl0937"
   },
   "social" : {
-    mastodon : "https://linuxrocks.online/@kion",
-    twitter : "https://twitter.com/kion_dgl",
-    reddit : "https://www.reddit.com/user/kion_dgl"
+    "mastodon" : "https://linuxrocks.online/@kion",
+    "twitter" : "https://twitter.com/kion_dgl",
+    "reddit" : "https://www.reddit.com/user/kion_dgl"
   },
   "lessons" : [
-    "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/master/README.md",
-    "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/master/01_Open_a_Window/README.md",
-    "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/master/02_Draw_a_Triangle/README.md"
-    ]
+    {
+      "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/master/README.md",
+      "source" :  "https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial"
+    },
+    {
+      "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/master/01_Open_a_Window/README.md"
+      "source" : "https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/tree/master/01_Open_a_Window"
+    },
+    {
+      "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/master/02_Draw_a_Triangle/README.md"
+      "source" : "https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/tree/master/02_Draw_a_Triangle"
+    }
+  ]
 }
