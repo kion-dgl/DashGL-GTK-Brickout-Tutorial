@@ -1,5 +1,5 @@
 {
-  "name" : "Kion",
+  "nickname" : "Kion",
   "author" : "Benjamin Collins",
   "email" : "kion@dashgl.com",
   "language" : "c",
@@ -18,8 +18,17 @@
     "reddit" : "https://www.reddit.com/user/kion_dgl"
   },
   "lessons" : [
-    "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/master/README.md",
-    "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/master/01_Open_a_Window/README.md",
-    "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/master/02_Draw_a_Triangle/README.md"
+    {
+      "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/master/README.md",
+      "source" :  "https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial"
+    },
+    {
+      "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/master/01_Open_a_Window/README.md",
+      "source" : "https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/tree/master/01_Open_a_Window"
+    },
+    {
+      "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/master/02_Draw_a_Triangle/README.md",
+      "source" : "https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/tree/master/02_Draw_a_Triangle"
+    }
   ]
 }
