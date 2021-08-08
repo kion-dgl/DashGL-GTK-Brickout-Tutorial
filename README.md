@@ -1,9 +1,3 @@
----
-title : Introduction
-source : https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial
-index : 00
----
-
 # DashGL Brickout Tutorial
 
 This tutorial covers how to make a Brickout Clone using the GTK+ library for a window context. OpenGL for rendering, and DashGL to manage matrix manipulation. We'll start off with something very simple, a very primitive clone of Brickout that doesn't use any sprites. We'll learn how to declare vertices and uniforms to draw basic objects on the screen and declare keydown callbacks to move entities on the screen. 
