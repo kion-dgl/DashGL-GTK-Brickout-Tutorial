@@ -98,7 +98,6 @@
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128829665-add32057-02ab-46d7-936c-ca8021fe6568.png"
     },
     {
-      // 13
       "title" : "Keydown Callbacks",
       "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/master/13_Keydown_Callbacks/README.md",
       "source" : "https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/tree/master/13_Keydown_Callbacks",
