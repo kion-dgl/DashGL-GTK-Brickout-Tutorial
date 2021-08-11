@@ -1,6 +1,7 @@
 {
   "nickname" : "Kion",
   "author" : "Benjamin Collins",
+  "avatar" : "https://avatars.githubusercontent.com/u/25621780",
   "email" : "kion@dashgl.com",
   "language" : "c",
   "window_library" : "gtk",
