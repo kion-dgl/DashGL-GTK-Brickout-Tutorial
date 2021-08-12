@@ -21,108 +21,126 @@
   },
   "lessons" : [
     {
+      "index" : 0,
       "title" : "Introduction",
       "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/master/README.md",
       "source" :  "https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128593831-81850476-8001-4054-8110-cf3c400aeec5.png"
     },
     {
+      "index" : 1,
       "title" : "Open a Window",
       "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/master/01_Open_a_Window/README.md",
       "source" : "https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/tree/master/01_Open_a_Window",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128594082-788b466f-cde6-486f-837c-a88d94dd6fde.png"
     },
     {
+      "index" : 2,
       "title" : "Draw a Triangle",
       "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/master/02_Draw_a_Triangle/README.md",
       "source" : "https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/tree/master/02_Draw_a_Triangle",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128594499-2228a4cd-81ca-4e41-8bf7-c15653df645f.png"
     },
     {
+      "index" : 3,
       "title" : "Separate Shaders",
       "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/master/03_Separate_Shaders/README.md",
       "source" : "https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/tree/master/03_Separate_Shaders",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128829634-d4d213f5-bc78-4f16-bf0b-42488c2abc1a.png"
     },
     {
+      "index" : 4,
       "title" : "Shader Program",
       "readme" : "https://raw.github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/master/04_Shader_Program/README.md",
       "source" : "https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/tree/master/04_Shader_Program",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128829635-758b7c89-558e-40c5-abcd-e707bef51dce.png"
     },
     {
+      "index" : 5,
       "title" : "Orthagonal Coordinates",
       "readme" : "https://raw.github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/master/05_Orthagonal_Coordinates/README.md",
       "source" : "https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/tree/master/05_Orthagonal_Coordinates",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128829642-c55aa3d7-7035-42ef-a424-e16ff820fa36.png"
     },
     {
+      "index" : 6,
       "title" : "Draw a Ball",
       "readme" : "https://raw.github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/master/06_Draw_a_Ball/README.md",
       "source" : "https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/tree/master/06_Draw_a_Ball",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128829648-005ae89c-58c1-44ae-bfa1-96b87f33294e.png"
     },
     {
+      "index" : 7,
       "title" : "Set Ball Position",
       "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/master/07_Set_Ball_Position/README.md",
       "source" : "https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/tree/master/07_Set_Ball_Position",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128829652-ca1aea7a-45d4-49d4-b627-e37f2816ab6e.png"
     },
     {
+      "index" : 8,
       "title" : "Move a Ball",
       "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/master/08_Move_a_Ball/README.md",
       "source" : "https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/tree/master/08_Move_a_Ball",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128829654-8a9d8947-a443-4755-a277-3b0e8dd928db.png"
     },
     {
+      "index" : 9,
       "title" : "Bounce a Ball",
       "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/master/09_Bounce_a_Ball/README.md",
       "source" : "https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/tree/master/09_Bounce_a_Ball",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128829657-79bfa219-bc1e-499f-be9f-67cd3ccdec32.png"
     },
     {
+      "index" : 10,
       "title" : "Define Ball Struct",
       "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/master/10_Style_Ball_Struct/README.md",
       "source" : "https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/tree/master/10_Style_Ball_Struct",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128829661-a94eea61-2f13-432a-b491-5f3fa748d78d.png"
     },
     {
+      "index" : 11,
       "title" : "Draw a Paddle",
       "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/master/11_Draw_a_Paddle/README.md",
       "source" : "https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/tree/master/11_Draw_a_Paddle",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128829662-8876bcff-b53f-4a35-90b9-2cf978962408.png"
     },
     {
+      "index" : 12,
       "title" : "Paddle Uniform Color",
       "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/master/12_Paddle_Uniform_Color/README.md",
       "source" : "https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/tree/master/12_Paddle_Uniform_Color",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128829665-add32057-02ab-46d7-936c-ca8021fe6568.png"
     },
     {
+      "index" : 13,
       "title" : "Keydown Callbacks",
       "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/master/13_Keydown_Callbacks/README.md",
       "source" : "https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/tree/master/13_Keydown_Callbacks",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128829668-793f6365-ac39-47c2-bc98-4313778f879f.png"
     },
     {
+      "index" : 14,
       "title" : "Paddle Hit Detection",
       "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/master/14_Paddle_Hit_Detection/README.md",
       "source" : "https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/tree/master/14_Paddle_Hit_Detection",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128829675-43078050-177b-47a2-ad6e-7f85b07d7565.png"
     },
     {
+      "index" : 15,
       "title" : "Draw Row of Bricks",
       "readme" : "https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/blob/master/15_Array_of_Bricks/README.md",
       "source" : "https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/tree/master/15_Array_of_Bricks",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128829678-e7adc0f5-2d59-49c2-908b-e1bb29ec83ab.png"
     },
     {
+      "index" : 16,
       "title" : "Draw Grid of Bricks",
       "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/master/16_Grid_of_Bricks/README.md",
       "source" : "https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/tree/master/16_Grid_of_Bricks",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128829682-2bf2689e-ef65-43f0-a184-710cf72ea4e6.png"
     },
     {
+      "index" : 17,
       "title" : "Break Some Bricks",
       "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/master/17_Break_Some_Bricks/README.md",
       "source" : "https://github.com/kion-dgl/DashGL-GTK-Brickout-Tutorial/tree/master/17_Break_Some_Bricks",
