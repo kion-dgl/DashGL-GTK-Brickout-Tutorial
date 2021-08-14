@@ -1,5 +1,5 @@
 {
-  "id" : 0,
+  "serial" : 0,
   "description" : "In this tutorial we make a Brickout clone using the GTK window library and OpenGL 3.0. We create a very simple game using only primitives drawn with shaders as an easy place to get started.",
   "nickname" : "Kion",
   "author" : "Benjamin Collins",
